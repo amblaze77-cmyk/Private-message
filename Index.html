@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A Letter Just for You</title>
+
+  <!-- Google Font for handwritten feel -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background: radial-gradient(circle at top, #1e293b, #020617);
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Playfair Display', serif;
+      color: #e5e7eb;
+    }
+
+    .envelope {
+      background: rgba(2, 6, 23, 0.9);
+      border-radius: 16px;
+      padding: 35px;
+      max-width: 600px;
+      width: 90%;
+      box-shadow: 0 0 40px rgba(148,163,184,0.25);
+      text-align: center;
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.4em;
+      margin-bottom: 10px;
+      color: #f8fafc;
+    }
+
+    .subtitle {
+      font-style: italic;
+      color: #cbd5f5;
+      margin-bottom: 25px;
+    }
+
+    input {
+      padding: 10px;
+      width: 80%;
+      border-radius: 8px;
+      border: none;
+      margin-top: 15px;
+      font-size: 1em;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 20px;
+      background: #e11d48;
+      color: white;
+      font-size: 1em;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+    }
+
+    #letter {
+      display: none;
+      margin-top: 30px;
+      line-height: 1.8;
+      text-align: left;
+      font-size: 1.05em;
+      animation: fadeIn 1.5s ease;
+    }
+
+    .signature {
+      margin-top: 25px;
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.4em;
+      color: #fda4af;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+<div class="envelope">
+  <h1>💌 A Private Letter</h1>
+  <div class="subtitle">Only for the one who knows the password</div>
+
+  <input type="password" id="password" placeholder="Enter the password">
+  <br>
+  <button onclick="unlock()">Open the Letter</button>
+
+  <div id="letter">
+    <p>
+      You can do it, I know you will—ik kar logi tum, and I truly believe that from my heart.
+      I trust you completely and I have full faith in your strength, your hard work, and your dreams.
+      May God bless you abundantly and guide you on every step toward your goals.
+    </p>
+
+    <p>
+      May your entrance exam go exactly the way you’re expecting—calm mind, confident heart,
+      and everything you’ve prepared coming together perfectly.
+      May Allah help you in everything you want, protect you from every fear and doubt,
+      and open doors for you where you least expect them.
+    </p>
+
+    <p>
+      My girl Sabhya, I know you’ve been through a lot, more than most people can see or understand,
+      but all of that has only made you stronger.
+      Every struggle you faced, every tear you held back, every moment you didn’t give up—it all matters.
+    </p>
+
+    <p>
+      You are capable, you are brave, and you deserve success and happiness.
+      Keep believing in yourself even on days when it feels hard,
+      because I believe in you always.
+    </p>
+
+    <p>
+      You’ve got this, and I’m sure you’ll make it. 🌙✨
+    </p>
+
+    <div class="signature">
+      — Always believing in you 🤍
+    </div>
+  </div>
+</div>
+
+<script>
+  function unlock() {
+    const pass = document.getElementById("password").value;
+    if (pass === "sabhyamygirl") {
+      document.getElementById("letter").style.display = "block";
+    } else {
+      alert("Wrong password ❌");
+    }
+  }
+</script>
+
+</body>
+</html>
